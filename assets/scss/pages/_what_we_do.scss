@@ -1,0 +1,341 @@
+.what-we-do {
+  position: relative;
+  width: 100%;
+  &__overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    width: 100%;
+  }
+
+  &__image {
+    @include forTablet {
+      height: 320px;
+      padding: 0 0 40px;
+    }
+    @include forPhone {
+      height: 270px;
+      padding: 0 0 30px;
+    }
+    @include forSmall {
+      height: auto;
+      padding: 120px 0 30px;
+    }
+    height: 480px;
+    background-image: url(https://www.simbrella.com/site/templates/img/we_do_bg.jpg?v=2);
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    background-size: cover;
+    padding-bottom: 70px;
+    @include flexbox(stretch, flex-end);
+    flex-direction: column;
+    &__container {
+      z-index: 1;
+      @include containerStyle();
+      width: 100%;
+      @include forSmall {
+        display: block;
+      }
+      &__text {
+        @include forTablet {
+          font-size: 32px;
+        }
+        @include forPhone {
+          font-size: 27px;
+        }
+        @include forSmall {
+          padding: 0 0 20px;
+          font-size: 24px;
+        }
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 1.29;
+        letter-spacing: 0.01em;
+        color: white;
+      }
+    }
+  }
+}
+
+.at-ml {
+  padding: 100px 0;
+  background: #f6f8ff;
+  @include forTablet {
+    padding: 40px 0;
+  }
+  &__wrapper {
+    @include containerStyle();
+    @include flexbox(center, space-between);
+    @include forTablet {
+      display: block;
+    }
+    &__left-side {
+      @include forOverTablet {
+        width: 100%;
+      }
+      width: 430px;
+      padding: 40px 24px 60px;
+      border: 1px solid #fff;
+      background: #fff;
+      border-radius: 4px;
+      &__image-container {
+        position: relative;
+        height: 230px;
+        text-align: center;
+        width: 100%;
+      }
+      &__text {
+        padding: 0 0 16px;
+        font-size: 24px;
+        line-height: 1.25;
+        text-align: center;
+        letter-spacing: 0.01em;
+        color: #222;
+      }
+      &__paragraph {
+        font-size: 16px;
+        line-height: 1.62;
+        text-align: center;
+        color: #5f6773;
+      }
+    }
+    &__right-side {
+      width: 500px;
+      @include forOverTablet {
+        width: calc(100% - 480px);
+      }
+      @include forTablet {
+        width: 100%;
+        padding: 30px 0 0;
+      }
+      &__list {
+        @include forSmall {
+          font-size: 16px;
+        }
+        list-style-type: none;
+        font-size: 20px;
+        line-height: 1.4;
+        color: #222;
+        position: relative;
+        &__list-item {
+          padding-left: 21px;
+          margin-bottom: 32px;
+          position: relative;
+          @include forSmall {
+            margin: 0 0 18px;
+          }
+          &__dots {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: block;
+            background: #ff931e;
+            position: absolute;
+            left: 0;
+            top: 10px;
+            @include forSmall {
+              top: 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.background-image {
+  min-height: 270px;
+  max-height: 480px;
+  background-image: url(https://www.simbrella.com/site/templates/img/single_image.jpg?v=2);
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+  height: 480px;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  &__overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    width: 100%;
+  }
+}
+.micro-lending {
+  padding: 100px 0;
+  background: #f6f8ff;
+  @include forTablet {
+    padding: 40px 0;
+  }
+  &__wrapper {
+    @include containerStyle();
+    @include flexbox(center, space-between);
+    @include forTablet {
+      display: block;
+    }
+    &__left-side {
+      width: 430px;
+      padding: 40px 24px 60px;
+      border: 1px solid #fff;
+      background: #fff;
+      border-radius: 4px;
+      @include forOverTablet {
+        width: 100%;
+      }
+      &__image-container {
+        position: relative;
+        height: 230px;
+        text-align: center;
+        width: 100%;
+      }
+
+      &__text {
+        padding: 0 0 16px;
+        font-size: 24px;
+        line-height: 1.25;
+        text-align: center;
+        letter-spacing: 0.01em;
+        color: #222;
+      }
+
+      &__paragraph {
+        font-size: 16px;
+        line-height: 1.62;
+        text-align: center;
+        color: #5f6773;
+      }
+    }
+
+    &__right-side {
+      width: 500px;
+      @include forOverTablet {
+        width: calc(100% - 480px);
+      }
+      @include forTablet {
+        width: 100%;
+        padding: 30px 0 0;
+      }
+      &__list {
+        list-style-type: none;
+        font-size: 20px;
+        line-height: 1.4;
+        color: #222;
+        position: relative;
+        @include forSmall {
+          font-size: 16px;
+        }
+
+        &__list-item {
+          padding-left: 21px;
+          margin-bottom: 32px;
+          position: relative;
+          @include forSmall {
+            margin: 0 0 18px;
+          }
+
+          &__dots {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: block;
+            background: #ff931e;
+            position: absolute;
+            left: 0;
+            top: 10px;
+            @include forSmall {
+              top: 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.data-engine {
+  padding: 100px 0;
+  background: #f6f8ff;
+  @include forTablet {
+    padding: 40px 0;
+  }
+  &__wrapper {
+    @include containerStyle();
+    @include flexbox(center, space-between);
+    @include forTablet {
+      display: block;
+    }
+    &__left-side {
+      width: 430px;
+      padding: 40px 24px 60px;
+      border: 1px solid #fff;
+      background: #fff;
+      border-radius: 4px;
+      @include forOverTablet {
+        width: 100%;
+      }
+      &__image-container {
+        position: relative;
+        height: 230px;
+        text-align: center;
+        width: 100%;
+      }
+
+      &__text {
+        padding: 0 0 16px;
+        font-size: 24px;
+        line-height: 1.25;
+        text-align: center;
+        letter-spacing: 0.01em;
+        color: #222;
+      }
+
+      &__paragraph {
+        font-size: 16px;
+        line-height: 1.62;
+        text-align: center;
+        color: #5f6773;
+      }
+    }
+
+    &__right-side {
+      width: 500px;
+      @include forOverTablet {
+        width: calc(100% - 480px);
+      }
+      @include forTablet {
+        width: 100%;
+        padding: 30px 0 0;
+      }
+      &__list {
+        list-style-type: none;
+        font-size: 20px;
+        line-height: 1.4;
+        color: #222;
+        position: relative;
+        @include forSmall {
+          font-size: 16px;
+        }
+
+        &__list-item {
+          padding-left: 21px;
+          margin-bottom: 32px;
+          position: relative;
+          @include forSmall {
+            margin: 0 0 18px;
+          }
+
+          &__dots {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: block;
+            background: #ff931e;
+            position: absolute;
+            left: 0;
+            top: 10px;
+            @include forSmall {
+              top: 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

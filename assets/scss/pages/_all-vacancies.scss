@@ -1,0 +1,129 @@
+.info {
+  padding: 120px 0 40px;
+  background: #fff;
+  position: relative;
+  &__wrapper {
+    @include containerStyle();
+    @include flexbox(center, space-between);
+    align-content: stretch;
+    @include forPhone {
+      display: block;
+    }
+    &__left {
+      width: calc(45% - 40px);
+      @include forPhone {
+        width: 100%;
+      }
+      &__main-text {
+        padding: 0 0 32px;
+        font-size: 32px;
+        line-height: 1.29;
+        font-weight: bold;
+        letter-spacing: 0.01em;
+        color: #222;
+        text-transform: uppercase;
+        @include forPhone {
+          font-size: 27px;
+        }
+        @include forSmall {
+          padding: 0;
+          font-size: 24px;
+        }
+      }
+      &__p {
+        padding-bottom: 20px;
+        font-size: 18px;
+        line-height: 1.56;
+        color: #5f6773;
+        display: flex;
+
+        &__link {
+          margin-top: 28px;
+          margin-left: 5px;
+          display: inline-block;
+          color: #0e80e5;
+        }
+        &__link:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    &__right {
+      width: auto;
+      @include forPhone {
+        display: none;
+      }
+      &__image {
+        width: 460px;
+      }
+    }
+  }
+}
+
+.vacancies {
+  padding: 100px 0;
+  background: #f6f8fe;
+  @include forTablet {
+    padding: 40px 0;
+  }
+  @include forSmall {
+    padding: 20px 0;
+  }
+  &__wrapper {
+    @include containerStyle();
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @include forTablet {
+      grid-gap: 20px;
+    }
+    @include forPhone {
+      grid-template-columns: 1fr;
+    }
+    gap: 30px;
+    grid-auto-rows: 1fr;
+
+    &__card {
+      @include flexbox();
+      border: 1px solid #ff931e;
+      border-radius: 4px;
+      padding: 40px 20px;
+      position: relative;
+      background-color: #fff;
+      transition: 0.4s;
+      @include forTablet {
+        padding: 30px 20px;
+      }
+      @include forSmall {
+        padding: 20px;
+      }
+      &__text {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 1.4;
+        letter-spacing: 0.01em;
+        color: #222;
+        text-align: center;
+        @include forTablet {
+          font-size: 21px;
+        }
+        @include forSmall {
+          font-size: 18px;
+        }
+      }
+      &__link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+    }
+    &__card:hover &__card__text {
+      color: #fff;
+    }
+    &__card:hover {
+      transition: 0.4s;
+      background-color: #ff931e;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+[data-aos^=fade][data-aos^=fade].aos-animate {
+    opacity: 1;
+    transform: translateZ(0);
+    transition: 1s;
+}
+[data-aos^=fade-down][data-aos^=fade-down].aos-animate {
+    
+    transition: 1s;
+}

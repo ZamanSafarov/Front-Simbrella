@@ -1,0 +1,62 @@
+@mixin flexbox($alignItems: center, $justifContent: center) {
+  display: flex;
+  align-items: $alignItems;
+  justify-content: $justifContent;
+}
+
+@mixin containerStyle($max-width: $max-width-for-all) {
+  max-width: $max-width;
+  margin: $margines-for-all;
+  padding: 0 20px;
+}
+@mixin forSmall {
+  @media only screen and (max-width: 479px) {
+    @content;
+  }
+}
+@mixin forTablet {
+  @media only screen and (max-width: 1023px) {
+    @content;
+  }
+}
+@mixin forOverTablet {
+  @media only screen and (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin forTablet2 {
+  @media only screen and (min-width: 767px) and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin forPhone {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+@mixin forPhone2 {
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin forClientSection {
+  @media only screen and (min-width: 240px) and (max-width: 479px) {
+    @content;
+  }
+}
+
+@mixin forHeight {
+  @media only screen and (min-height: 850px) {
+    @content;
+  }
+}
+
+@mixin forClientSectionComp2 {
+  @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    @content;
+  }
+}
+

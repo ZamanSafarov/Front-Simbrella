@@ -1,0 +1,73 @@
+.all-news {
+  min-height: 600px;
+  padding: 60px 0 20px;
+  @include forTablet {
+    padding: 40px 0 20px;
+  }
+  @include forPhone {
+    padding: 30px 0 20px;
+  }
+  @include forSmall {
+    padding: 20px 0;
+  }
+  &__wrapper {
+    @include containerStyle();
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px 30px;
+    @include forTablet {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 50px 20px;
+    }
+    @include forSmall {
+      grid-template-columns: 1fr;
+      grid-gap: 30px 20px;
+    }
+    &__cards {
+      position: relative;
+
+      &__image-container {
+        padding-bottom: 24px;
+        @include forPhone {
+          padding-bottom: 12px;
+        }
+        &__image {
+          display: block;
+          width: 100%;
+          border-radius: 4px;
+        }
+      }
+      &__paragraph {
+        text-align: left;
+        min-height: 100px;
+        padding-bottom: 20px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 1.64;
+        color: #222;
+        @include forPhone {
+          font-size: 16px;
+        }
+        @include forSmall {
+          min-height: 1px;
+        }
+      }
+      &__time {
+        font-size: 18px;
+        line-height: 1.33;
+        color: #5f6773;
+        @include forPhone {
+          font-size: 16px;
+        }
+      }
+      &__link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+    }
+  }
+}

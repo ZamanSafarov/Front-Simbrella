@@ -1,0 +1,442 @@
+.our-story {
+  padding: 90px 0;
+  background-color: #f6f8fe;
+  overflow: hidden;
+  @include forTablet {
+    padding: 40px 0;
+  }
+  @include forSmall {
+    padding: 30px 0;
+  }
+  &__wrapper {
+    @include containerStyle();
+    @include flexbox(stretch, space-between);
+    @include forTablet {
+      display: block;
+    }
+    &__l {
+      width: calc(50% - 15px);
+      @include forTablet {
+        width: 100%;
+      }
+      &__up {
+        min-height: 626px;
+        @include forTablet {
+          min-height: 1px;
+        }
+        &__container {
+          font-size: 18px;
+          line-height: 1.56;
+          color: #222;
+          @include forPhone {
+            font-size: 16px;
+          }
+          &__main-text {
+            padding: 0 0 24px;
+            font-weight: bold;
+            font-size: 56px;
+            line-height: 1.29;
+            letter-spacing: 0.01em;
+            color: #2d3192;
+            @include forTablet {
+              padding: 0 0 16px;
+              font-size: 36px;
+            }
+            @include forPhone {
+              font-size: 32px;
+            }
+            @include forSmall {
+              font-size: 27px;
+            }
+          }
+          &__paragraph {
+            padding-bottom: 24px;
+            @include forPhone {
+              padding-bottom: 16px;
+            }
+          }
+        }
+      }
+      &__down {
+        width: 100%;
+        height: 700px;
+        text-align: center;
+        position: relative;
+        @include forTablet {
+          height: 500px;
+        }
+        @include forPhone {
+          height: 80vw;
+        }
+        &__round-right {
+          display: inline-block;
+          width: 424px;
+          height: 424px;
+          border: 2px solid #2d3192;
+          position: absolute;
+          left: calc(50% - 212px);
+          top: calc(50% - 212px);
+          border-radius: 50%;
+          @include forPhone {
+            width: 60vw;
+            height: 60vw;
+            left: calc(50% - 30vw);
+            top: calc(50% - 30vw);
+          }
+        }
+        &__round::before {
+          content: "";
+          display: block;
+          width: calc(100% - 50px);
+          height: calc(100% - 50px);
+          background-color: #fff;
+          position: absolute;
+          left: 25px;
+          top: 25px;
+          border-radius: 50%;
+        }
+        &__round-left {
+          display: inline-block;
+          width: 424px;
+          height: 424px;
+          border: 2px solid #2d3192;
+          position: absolute;
+          left: auto;
+          right: calc(100% + 60px);
+          top: calc(50% - 212px);
+          border-radius: 50%;
+        }
+        &__year {
+          font-weight: bold;
+          font-size: 210px;
+          line-height: 700px;
+          text-align: center;
+          letter-spacing: 0.01em;
+          color: #ff931e;
+          position: relative;
+          @include forTablet {
+            line-height: 500px;
+          }
+          @include forPhone {
+            line-height: 80vw;
+            font-size: 30vw;
+          }
+        }
+      }
+      &__down::before {
+        content: "";
+        transform: rotate(180deg);
+        display: block;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: calc(50% - 100px);
+        bottom: 36px;
+        border: none;
+        border-right: 2px solid #2d3192;
+        border-bottom: 2px solid #2d3192;
+        border-radius: 0 0 100% 0;
+        left: calc(50% - 0px);
+        top: 36px;
+        @include forTablet {
+          display: none;
+        }
+      }
+      &__down::after {
+        content: "";
+        display: block;
+        width: calc(100% - 170px);
+        height: 2px;
+        background-color: #2d3192;
+        position: absolute;
+        left: calc(50% + 100px);
+        top: 36px;
+        @include forTablet {
+          display: none;
+        }
+      }
+    }
+    &__r {
+      width: calc(50% - 15px);
+      @include forTablet {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      &__up {
+        width: 100%;
+        height: 700px;
+        text-align: center;
+        position: relative;
+        @include forTablet {
+          height: 500px;
+        }
+        @include forPhone {
+          height: 80vw;
+        }
+        &__round-left {
+          display: inline-block;
+          width: 424px;
+          height: 424px;
+          border: 2px solid #2d3192;
+          position: absolute;
+          left: calc(50% - 212px);
+          top: calc(50% - 212px);
+          border-radius: 50%;
+          @include forPhone {
+            width: 60vw;
+            height: 60vw;
+            left: calc(50% - 30vw);
+            top: calc(50% - 30vw);
+          }
+        }
+        &__round-left::before {
+          content: "";
+          display: block;
+          width: calc(100% - 50px);
+          height: calc(100% - 50px);
+          background-color: #fff;
+          position: absolute;
+          left: 25px;
+          top: 25px;
+          border-radius: 50%;
+        }
+        &__round-right {
+          display: inline-block;
+          width: 424px;
+          height: 424px;
+          border: 2px solid #2d3192;
+          position: absolute;
+          left: calc(100% + 60px);
+          top: calc(50% - 212px);
+          border-radius: 50%;
+        }
+        &__year {
+          font-weight: bold;
+          font-size: 210px;
+          line-height: 700px;
+          text-align: center;
+          letter-spacing: 0.01em;
+          color: #ff931e;
+          position: relative;
+          @include forTablet {
+            line-height: 500px;
+          }
+          @include forPhone {
+            line-height: 80vw;
+            font-size: 30vw;
+          }
+        }
+      }
+      &__up::before {
+        content: "";
+        display: block;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: calc(50% - 100px);
+        bottom: 36px;
+        border: none;
+        border-right: 2px solid #2d3192;
+        border-bottom: 2px solid #2d3192;
+        border-radius: 0 0 100% 0;
+        @include forTablet {
+          display: none;
+        }
+      }
+      &__down {
+        min-height: 626px;
+        @include forTablet {
+          min-height: 1px;
+        }
+        &__container {
+          font-size: 18px;
+          line-height: 1.56;
+          color: #222;
+          @include forPhone {
+            font-size: 16px;
+          }
+          &__paragraph {
+            padding: 0 0 24px;
+            @include forPhone {
+              padding-bottom: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.conformity {
+  padding: 90px 0;
+  background-color: #f6f8fe;
+  @include forTablet {
+    padding: 40px 0;
+  }
+  @include forSmall {
+    padding: 30px 0;
+  }
+  &__wrapper {
+    @include containerStyle();
+    @include flexbox(stretch, space-between);
+    @include forTablet {
+      display: block;
+    }
+    &__l {
+      width: calc(50% - 15px);
+      font-size: 18px;
+      line-height: 1.56;
+      color: #222;
+      @include forTablet {
+        width: 100%;
+        padding: 0 0 24px;
+      }
+      @include forPhone {
+        font-size: 16px;
+      }
+      &__text {
+        padding: 0 0 40px;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 1.33;
+        letter-spacing: 0.01em;
+        color: #222;
+        @include forTablet {
+          padding: 0 0 16px;
+          font-size: 36px;
+        }
+        @include forPhone {
+          font-size: 32px;
+        }
+        @include forSmall {
+          font-size: 27px;
+        }
+      }
+      &__paragraph {
+        padding-bottom: 40px;
+        @include forPhone{
+          padding-bottom: 16px;
+        }
+      }
+      &__list {
+        list-style: none;
+        &__list-item {
+          margin-bottom:24px;
+          padding-left:21px;
+          position: relative;
+          @include forPhone{
+            margin-bottom: 16px;
+          }
+        }
+        &__list-item::before {
+          content: "";
+          display: block;
+          width: 8px;
+          height: 8px;
+          background-color: #ff931e;
+          position: absolute;
+          left: 0;
+          top: 10px;
+          border-radius: 50%;
+          @include forPhone{
+            top:7px;
+          }
+        }
+      }
+    }
+    &__r {
+      width: calc(50% - 15px);
+      @include forTablet{
+        width: 100%;
+      }
+      &__padding {
+        padding: 48px;
+        border: 2px solid #2d3192;
+        background-color: #fff;
+        border-radius: 24px;
+        box-shadow: 0 2px 0 0 #2d3192;
+        @include forPhone{
+          padding: 24px;
+        }
+        &__form {
+          &__input-container {
+            padding: 0 0 24px;
+            &__input {
+              width: 100%;
+              height: 56px;
+              padding: 0 20px;
+              border: 1px solid #dddee1;
+              font-size: 16px;
+              color: #000;
+              border-radius: 12px;
+            }
+            &--side {
+              @include flexbox(center, space-between);
+              @include forTablet{
+                display: block;
+              }
+              &__input {
+                width: calc(50% - 10px);
+                @include forSmall{
+                  width: 100%;
+                  
+                }
+              }
+              @include forSmall{
+                &__input:first-child{
+                  margin-bottom: 24px;
+                }
+              }
+            }
+            &__textarea {
+              width: 100%;
+              height: 140px;
+              padding: 16px 20px;
+              border: 1px solid #dddee1;
+              font-size: 16px;
+              color: #000;
+              border-radius: 12px;
+              resize: none;
+            }
+          }
+          &__button {
+            text-align: right;
+            &__send {
+              display: inline-block;
+              width: calc(50% - 15px);
+              height: 64px;
+              padding: 0 48px 0 24px;
+              border: none;
+              font-weight: 600;
+              font-size: 15px;
+              line-height: 64px;
+              color: #fff;
+              text-align: left;
+              text-decoration: none;
+              background-color: #ff931e;
+              background-repeat: no-repeat;
+              background-position: calc(100% - 24px) 50%;
+              background-image: url(https://www.simbrella.com/site/templates/img/link_white_arrow.svg);
+              border-radius: 12px;
+              cursor: pointer;
+              @include forSmall{
+                width: 100%;
+              }
+            }
+          }
+          &__paragraph {
+            padding-bottom:32px;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 1.56;
+            color: #222;
+            @include forSmall{
+              padding-bottom:16px;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

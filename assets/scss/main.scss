@@ -1,0 +1,14 @@
+@import "./abstracts/variables";
+@import "./core/reset";
+@import "./abstracts/mixins";
+@import "./for-aos/aos";
+@import "./components/header";
+@import "./components/footer";
+@import "./pages/home.scss";
+@import "./pages/what_we_do";
+@import "./pages/all-vacancies";
+@import "./pages/vacancies-details";
+@import "./pages/all-news";
+@import "./pages/news-details";
+@import "./pages/our-branches";
+@import "./pages/investors";

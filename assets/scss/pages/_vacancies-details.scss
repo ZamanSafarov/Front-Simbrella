@@ -1,0 +1,319 @@
+.title-sec {
+  @include forTablet {
+    height: 320px;
+    padding-bottom: 40px;
+  }
+  @include forPhone {
+    height: 270px;
+    padding-bottom: 30px;
+  }
+  @include forSmall {
+    height: auto;
+    padding: 120px 0 30px;
+  }
+  &--investor-image{
+    background-image: url(https://www.simbrella.com/site/templates/img/vacancy_bg.jpg);
+  }
+  height: 300px;
+  background-image: url(https://www.simbrella.com/site/templates/img/vacancies_header_bg.svg);
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include flexbox(stretch, flex-end);
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  padding-bottom: 70px;
+  background-color: #0c0d26;
+  &__wrapper {
+    width: 100%;
+    @include containerStyle();
+    @include flexbox(center, space-between);
+    &__text {
+      @include forTablet {
+        font-size: 32px;
+      }
+      @include forPhone {
+        font-size: 27px;
+      }
+      @include forSmall {
+        padding-bottom: 20px;
+        font-size: 24px;
+      }
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 1.29;
+      letter-spacing: 0.01em;
+      color: #fff;
+    }
+  }
+}
+
+.details {
+  @include forTablet {
+    padding: 60px 0 20px;
+  }
+  @include forPhone {
+    padding: 30px 0 20px;
+  }
+
+  padding: 60px 0 90px;
+  background: #f6f8fe;
+  &__wrapper {
+    @include containerStyle();
+    &__text {
+      width: 100%;
+      padding: 0 0 18px;
+      font-size: 32px;
+      line-height: 1.33;
+      font-weight: bold;
+      letter-spacing: 0.01em;
+      color: #222;
+      @include forTablet {
+        font-size: 27px;
+      }
+      @include forPhone {
+        font-size: 24px;
+      }
+      @include forSmall {
+        font-size: 21px;
+      }
+    }
+    &__up {
+      padding-bottom: 30px;
+      margin-bottom: 60px;
+      border-bottom: 1px solid #e7e7e7;
+      &--down {
+        border: none;
+      }
+      &__list {
+        list-style-type: none;
+        width: 100%;
+        &__list-item {
+          margin-bottom: 24px;
+          padding-left: 21px;
+          font-size: 18px;
+          line-height: 1.56;
+          color: #222;
+          position: relative;
+          @include forPhone {
+            margin: 0 0 18px;
+            font-size: 16px;
+          }
+          &__dots {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: block;
+            background: #ff931e;
+            position: absolute;
+            left: 0;
+            top: 10px;
+            @include forPhone {
+              top: 7px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.apply {
+  @include forTablet {
+    padding: 40px 0;
+  }
+  padding: 120px 0;
+  background: #2d3192;
+  &__wrapper {
+    @include containerStyle();
+    &__text {
+      @include forTablet {
+        padding: 0 0 20px;
+        font-size: 27px;
+      }
+      @include forPhone {
+        font-size: 24px;
+      }
+      @include forSmall {
+        font-size: 21px;
+      }
+      font-weight: 500;
+      padding-bottom: 80px;
+      font-size: 36px;
+      line-height: 1.29;
+      letter-spacing: 0.01em;
+      color: #fff;
+    }
+    &__form {
+      padding-bottom: 80px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      @include flexbox(center, space-between);
+      @include forTablet {
+        display: block;
+        padding: 0 0 40px;
+      }
+      &__left {
+        width: calc(55% - 15px);
+        @include flexbox(flex-start, space-between);
+        @include forTablet {
+          width: 100%;
+          padding: 0 0 20px;
+        }
+        @include forPhone {
+          display: block;
+          padding: 0;
+        }
+        &__input-container {
+          width: calc(33.333% - 15px);
+          @include forTablet {
+            width: calc(33.333% - 10px);
+          }
+          @include forPhone {
+            width: 100%;
+            padding-bottom: 20px;
+          }
+          &__input {
+            display: block;
+            width: 100%;
+            height: 64px;
+            padding: 0 20px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            background: none;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: inherit;
+            color: #fff;
+            border-radius: 12px;
+          }
+        }
+      }
+      &__right {
+        @include flexbox(flex-start, space-between);
+        @include forTablet {
+          width: 100%;
+        }
+        @include forSmall {
+          display: block;
+        }
+        width: calc(45% - 15px);
+        &__file-upload {
+          @include forTablet {
+            width: calc(50% - 10px);
+          }
+          @include forSmall {
+            width: 100%;
+            margin-bottom: 20px;
+          }
+          @include flexbox();
+          height: 64px;
+          text-align: center;
+          border: 1px dashed rgba(255, 255, 255, 0.5);
+          border-radius: 12px;
+          cursor: pointer;
+          width: 225px;
+          &__input {
+            display: none;
+          }
+          &__text {
+            display: inline-block;
+            padding: 0 10px 0 27px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 2;
+            color: #fff;
+            white-space: nowrap;
+            max-width: 70%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            background: url(https://www.simbrella.com/site/templates/img/file_white_icon.svg);
+            background-repeat: no-repeat;
+            background-position: 0 50%;
+          }
+        }
+        &__submit {
+          @include forTablet {
+            width: calc(50% - 5px);
+          }
+          @include forSmall {
+            width: 100%;
+          }
+          width: calc(50% - 15px);
+          &__link {
+            width: 100%;
+            @include flexbox();
+            text-align: left;
+            transition: 0.4s;
+            border-radius: 12px;
+            border: 3px solid white;
+            color: white;
+            display: inline-block;
+            height: 64px;
+            padding: 0 80px 0 24px;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 58px;
+            text-decoration: none;
+            background: url(https://www.simbrella.com/site/templates/img/link_orange_icon.svg)
+              calc(100% - 24px) 50%;
+            background-repeat: no-repeat;
+            transition: 0.4s;
+          }
+          &__link:hover {
+            transition: 0.4s;
+            background: url(https://www.simbrella.com/site/templates/img/link_orange_icon.svg)
+              calc(100% - 19px) 50%;
+            background-repeat: no-repeat;
+            border-color: #ff931e;
+          }
+        }
+      }
+    }
+    &__advantages {
+      @include forTablet {
+        padding-top: 60px;
+      }
+      @include forPhone {
+        padding-top: 40px;
+      }
+      padding-top: 85px;
+      @include flexbox(center, space-between);
+      align-content: stretch;
+      &__card {
+        width: calc(33.333% - 30px);
+        @include forPhone {
+          width: calc(33.333% - 15px);
+          padding-bottom: 20px;
+          text-align: center;
+        }
+        &__image-container {
+          height: 96px;
+          @include forPhone {
+            @include flexbox();
+          }
+          &__image {
+            width: 48px;
+          }
+        }
+        &__text {
+          @include forTablet {
+            font-size: 18px;
+          }
+          @include forPhone {
+            padding-bottom: 8px;
+            font-size: 16px;
+          }
+          @include forSmall {
+            font-size: 14px;
+          }
+          padding: 0 0 16px;
+          font-weight: bold;
+          font-size: 25px;
+          line-height: 1.6;
+          letter-spacing: 0.01em;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

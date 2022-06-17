@@ -1,0 +1,332 @@
+.contacts {
+  background-color: black;
+  background-image: url(https://www.simbrella.com/site/templates/img/footer_bg.svg);
+  background-size: cover 2px;
+  background-repeat: no-repeat;
+  padding: 35px 0 25px;
+  background-position: 0 50%;
+  @include forTablet {
+    padding: 30px 0;
+  }
+  @include forPhone {
+    padding: 20px 0;
+  }
+  @include forSmall {
+    min-height: 1px;
+  }
+  &__wrapper-up {
+    @include containerStyle();
+    @include flexbox(stretch, space-between);
+    flex-wrap: nowrap;
+    width: 100%;
+    @include forPhone {
+      display: block;
+    }
+    &__main-text {
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 1.29;
+      letter-spacing: 0.01em;
+      color: #fff;
+      @include forOverTablet {
+        margin: -8px 0 0;
+      }
+      @include forTablet {
+        margin-top: -10px;
+        font-size: 32px;
+      }
+      @include forPhone {
+        padding-bottom: 20px;
+        font-size: 27px;
+        margin: 0;
+      }
+      @include forSmall {
+        font-size: 24px;
+      }
+    }
+    &__right-container {
+      width: calc(100% - 360px);
+      @include forTablet {
+        width: calc(100% - 240px);
+      }
+      @include forPhone {
+        width: 100%;
+      }
+      &__head {
+        @include flexbox(center, space-between);
+        align-content: center;
+        padding-bottom: 50px;
+        @include forOverTablet {
+          padding: 0 0 60px;
+        }
+        @include forTablet {
+          display: block;
+        }
+        @include forSmall {
+          padding: 0 0 30px;
+        }
+        &__navs {
+          font-size: 0;
+          @include flexbox(stretch, space-between);
+          @include forTablet {
+            padding-bottom: 40px;
+          }
+          @include forPhone {
+            padding-bottom: 30px;
+          }
+          &__list {
+            list-style: none;
+            flex-wrap: wrap;
+            &__list-item {
+              display: inline-block;
+              padding: 0 48px;
+              border-left: 1px solid #505050;
+              @include forOverTablet {
+                padding: 0 20px;
+              }
+              @include forSmall {
+                padding: 0 10px;
+              }
+              &__link {
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 1.33;
+                color: rgba(255, 255, 255, 0.5);
+                text-decoration: none;
+                text-transform: uppercase;
+                transition: 0.3s;
+                @include forOverTablet {
+                  font-size: 21px;
+                }
+                @include forSmall {
+                  font-size: 16px;
+                }
+              }
+
+              &__link:hover {
+                transition: 0.3s;
+                color: #ff931e;
+              }
+            }
+            &__list-item:first-child {
+              border-left: none;
+              padding-left: 0;
+            }
+          }
+        }
+        &__our-branches {
+          &__link {
+            display: inline-block;
+            height: 56px;
+            padding: 0 83px 0 20px;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 49px;
+            color: white;
+            border: 3px solid #dfe4eb;
+            border-radius: 12px;
+            text-decoration: none;
+            background: url(https://www.simbrella.com/site/templates/img/link_orange_icon.svg)
+              calc(100% - 24px) 50%;
+            background-repeat: no-repeat;
+            transition: 0.4s;
+          }
+          &__link:hover {
+            transition: 0.4s;
+            background: url(https://www.simbrella.com/site/templates/img/link_orange_icon.svg)
+              calc(100% - 19px) 50%;
+            background-repeat: no-repeat;
+            border-color: #ff931e;
+          }
+        }
+      }
+      &__city {
+        display: none;
+        &__info {
+          padding-bottom: 48px;
+          @include forOverTablet {
+            padding: 0 0 30px;
+          }
+          @include forTablet {
+            padding-bottom: 20px;
+          }
+          &__text {
+            display: inline-block;
+            padding-bottom: 12px;
+            font-size: 18px;
+            line-height: 1.45;
+            color: rgba(255, 255, 255, 0.6);
+            @include forOverTablet {
+              padding: 0 0 8px;
+            }
+            @include forTablet {
+              padding-bottom: 8px;
+              font-size: 16px;
+            }
+            @include forPhone {
+              padding-bottom: 4px;
+              font-size: 14px;
+            }
+          }
+          &__paragraph {
+            @include forTablet {
+              font-size: 18px;
+            }
+            @include forPhone {
+              font-size: 16px;
+            }
+            font-weight: 600;
+            font-size: 19px;
+            line-height: 1.54;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  &__wrapper-down {
+    @include containerStyle();
+    @include flexbox(center, space-between);
+    padding-top: 40px;
+    @include forTablet {
+      padding: 40px 20px 0;
+    }
+    @include forPhone {
+      display: block;
+      padding: 40px 20px 0;
+      text-align: center;
+    }
+    &__author {
+      display: flex;
+      align-items: center;
+      @include forPhone {
+        justify-content: center;
+      }
+      &__text {
+        padding-right: 10px;
+        font-size: 12px;
+        line-height: 2.67;
+        color: #fff;
+      }
+      &__container {
+        display: flex;
+        text-align: center;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 2.67;
+        color: #fff;
+        text-decoration: none;
+        position: relative;
+        &__text {
+          padding-left: 10px;
+          margin-top: 2px;
+        }
+        &__link {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+    &__rights {
+      width: calc(100% - 360px);
+      line-height: 1.5;
+      @include forPhone {
+        width: 100%;
+        padding-top: 10px;
+      }
+      &__text {
+        font-size: 16px;
+        color: #999;
+        @include forPhone {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+.active {
+  color: #ff931e;
+}
+.active-for-text {
+  display: block;
+}
+.footer {
+  background-color: black;
+  &__wrapper-down {
+    @include containerStyle();
+    @include flexbox(center, space-between);
+    padding: 34px 20px;
+
+    @include forTablet {
+      padding: 34px 20px;
+    }
+
+    @include forPhone {
+      display: block;
+      padding: 34px 20px;
+      text-align: center;
+    }
+
+    &__author {
+      display: flex;
+      align-items: center;
+
+      @include forPhone {
+        justify-content: center;
+      }
+
+      &__text {
+        padding-right: 10px;
+        font-size: 12px;
+        line-height: 2.67;
+        color: #fff;
+      }
+
+      &__container {
+        display: flex;
+        text-align: center;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 2.67;
+        color: #fff;
+        text-decoration: none;
+        position: relative;
+
+        &__text {
+          padding-left: 10px;
+          margin-top: 2px;
+        }
+
+        &__link {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+
+    &__rights {
+      width: calc(100% - 360px);
+      line-height: 1.5;
+
+      @include forPhone {
+        width: 100%;
+        padding-top: 10px;
+      }
+
+      &__text {
+        font-size: 16px;
+        color: #999;
+
+        @include forPhone {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,217 @@
+.header {
+  z-index: 50;
+  position: fixed;
+  width: 100%;
+  height: 110px;
+  transition: 0.4s;
+  &__container {
+    height: 100%;
+    @include containerStyle();
+    @include flexbox(center, space-between);
+    &__logo {
+      &__link {
+        display: inline-block;
+        width: 154px;
+        height: 53px;
+        transition: 0.4s;
+        @include forSmall {
+          transition: 0.4s;
+          width: 130px;
+          height: 45px;
+        }
+        &__image {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    &__nav {
+      letter-spacing: 0.5px;
+      &__list {
+        @include flexbox(center, space-between);
+        list-style-type: none;
+        position: relative;
+        &__list-item {
+          @include forTablet {
+            display: none;
+          }
+          padding-left: 35px;
+          font-size: 17px;
+          &__link {
+            font-style: inherit;
+            line-height: 1.41;
+            color: #eee;
+            text-decoration: none;
+            transition: 0.15s linear;
+            padding: 8px 0px;
+          }
+          &__link:hover {
+            color: #ff931e;
+          }
+        }
+        &__burger-menu {
+          display: none;
+          position: absolute;
+          transform: translate(-50%, -50%);
+          width: 20px;
+          @include forTablet {
+            display: block;
+            margin-right: 20px;
+          }
+          &__link {
+            position: relative;
+            @include forTablet {
+              padding: 10px;
+              position: absolute;
+              transform: translate(-50%, -50%);
+              cursor: pointer;
+            }
+            &__menu-line {
+              display: block;
+              width: 22px;
+              border-radius: 2px;
+              height: 2px;
+              background: #fff;
+              transition: all 0.3s;
+              position: relative;
+              &--first {
+                transition: 0.2s;
+              }
+              &--second {
+                transition: 0.4s;
+              }
+              &--third {
+                transition: 0.6s;
+              }
+            }
+            &__menu-line + &__menu-line {
+              margin-top: 5px;
+            }
+            .active &__menu-line:nth-child(1) {
+              animation: ease 0.7s top forwards;
+            }
+
+            .not-active &__menu-line:nth-child(1) {
+              animation: ease 0.7s top-2 forwards;
+            }
+
+            .active &__menu-line:nth-child(2) {
+              animation: ease 0.7s scaled forwards;
+            }
+
+            .not-active &__menu-line:nth-child(2) {
+              animation: ease 0.7s scaled-2 forwards;
+            }
+
+            .active &__menu-line:nth-child(3) {
+              animation: ease 0.7s bottom forwards;
+            }
+
+            .not-active &__menu-line:nth-child(3) {
+              animation: ease 0.7s bottom-2 forwards;
+            }
+
+            @keyframes top {
+              0% {
+                top: 0;
+                transform: rotate(0);
+              }
+              50% {
+                top: 7px;
+                transform: rotate(0);
+              }
+              100% {
+                top: 7px;
+                transform: rotate(45deg);
+              }
+            }
+
+            @keyframes top-2 {
+              0% {
+                top: 7px;
+                transform: rotate(45deg);
+              }
+              50% {
+                top: 7px;
+                transform: rotate(0deg);
+              }
+              100% {
+                top: 0;
+                transform: rotate(0deg);
+              }
+            }
+
+            @keyframes bottom {
+              0% {
+                bottom: 0;
+                transform: rotate(0);
+              }
+              50% {
+                bottom: 7px;
+                transform: rotate(0);
+              }
+              100% {
+                bottom: 7px;
+                transform: rotate(135deg);
+              }
+            }
+
+            @keyframes bottom-2 {
+              0% {
+                bottom: 7px;
+                transform: rotate(135deg);
+              }
+              50% {
+                bottom: 7px;
+                transform: rotate(0);
+              }
+              100% {
+                bottom: 0;
+                transform: rotate(0);
+              }
+            }
+
+            @keyframes scaled {
+              50% {
+                transform: scale(0);
+              }
+              100% {
+                transform: scale(0);
+              }
+            }
+
+            @keyframes scaled-2 {
+              0% {
+                transform: scale(0);
+              }
+              50% {
+                transform: scale(0);
+              }
+              100% {
+                transform: scale(1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// .burger-animation {
+//   top: 50%;
+// }
+// .first_line_rotate {
+//   transform: rotate(135deg);
+// }
+// .second_line_visible {
+//   visibility: hidden;
+// }
+// .third_line_rotate {
+//   transform: rotate(225deg);
+// }
+.sticky {
+  transition: 0.4s;
+  background-color: white;
+  height: 80px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.21);
+}

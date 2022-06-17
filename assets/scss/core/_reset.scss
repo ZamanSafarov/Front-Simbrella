@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-style: normal;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  text-align: left;
+}
+::placeholder {
+  color: #aaaaaa ;
+}

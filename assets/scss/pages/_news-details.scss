@@ -1,0 +1,65 @@
+.all-in {
+  background: #f6f8fe;
+  padding-bottom: 90px;
+  @include forPhone {
+    padding-bottom: 40px;
+  }
+  &__before-sec {
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    line-height: 1.29;
+    letter-spacing: 0.01em;
+    position: relative;
+    @include forTablet {
+      padding-bottom: 20px;
+    }
+    &__blue-background {
+      display: block;
+      width: 100%;
+      height: 110px;
+      margin: 0 0 20px;
+      background-color: #0c0d26;
+    }
+    &__main-text {
+      @include containerStyle(820px);
+      color: #2d3192;
+      font-weight: bold;
+      font-size: 32px;
+      @include forTablet {
+        font-size: 27px;
+      }
+      @include forPhone {
+        font-size: 24px;
+      }
+      @include forSmall {
+        font-size: 21px;
+      }
+    }
+  }
+  &__detail {
+    @include containerStyle(820px);
+    @include forPhone {
+      font-size: 16px;
+    }
+    &__image-container {
+      padding-bottom: 60px;
+      @include forTablet {
+        padding-bottom: 30px;
+      }
+      &__image {
+        width: 100%;
+        border-radius: 4px;
+      }
+    }
+    &__paragraph {
+      padding-bottom: 40px;
+      font-size: 18px;
+      line-height: 1.56;
+      color: #222;
+      @include forPhone {
+        padding-bottom: 25px;
+        font-size: 16px;
+      }
+    }
+  }
+}
