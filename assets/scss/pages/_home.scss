@@ -71,34 +71,29 @@
           font-size: 15px;
         }
       }
-      &__link {
-        @include forTablet {
-          display: none;
-        }
-        margin-top: 46%;
-        display: inline-block;
-        padding: 0 0 0 34px;
-        font-size: 14px;
-        line-height: 1.71;
-        color: #fff;
-        text-decoration: none;
-        position: absolute;
-        font-weight: 500;
-        &__discover {
-          display: inline-block;
-          margin-bottom: 3px;
-        }
+    }
+  }
+  &__mouse-container {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 4%;
+    @include forTablet {
+      display: none;
+    }
+    &__link {
+      text-decoration: none;
+      @include containerStyle();
+      display: flex;
+      align-items: center;
+      &__img {
+        margin-bottom: 10px;
       }
-      &__link::before {
-        content: "";
-        display: block;
-        width: 22px;
-        height: 41px;
-        background: url(https://www.simbrella.com/site/templates/img/mouse_icon.svg)
-          no-repeat 0 0;
-        position: absolute;
-        left: 0;
-        top: calc(50% - 26px);
+      &__discover {
+        font-size: 14px;
+        padding-left: 10px;
+        text-decoration: none;
+        color: white;
       }
     }
   }
@@ -308,7 +303,10 @@
       }
       &__item {
         transition: 0.3s;
-
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0.9);
+        transition: 0.9s cubic-bezier(0.39, 0.575, 0.565, 1);
         &--1 {
           width: 210px;
           height: 150px;
@@ -317,6 +315,7 @@
           top: 0px;
         }
         &--2 {
+          transition-delay: 0.1s;
           width: 202px;
           height: 202px;
           position: absolute;
@@ -324,6 +323,7 @@
           top: 31px;
         }
         &--3 {
+          transition-delay: 0.2s;
           width: 150px;
           height: 210px;
           position: absolute;
@@ -331,6 +331,7 @@
           top: 208px;
         }
         &--4 {
+          transition-delay: 0.3s;
           width: 202px;
           height: 202px;
           position: absolute;
@@ -338,6 +339,7 @@
           top: 390px;
         }
         &--5 {
+          transition-delay: 0.5s;
           width: 210px;
           height: 150px;
           position: absolute;
@@ -345,6 +347,7 @@
           top: 474px;
         }
         &--6 {
+          transition-delay: 0.6s;
           width: 202px;
           height: 202px;
           position: absolute;
@@ -352,6 +355,7 @@
           top: 390px;
         }
         &--7 {
+          transition-delay: 0.7s;
           width: 150px;
           height: 210px;
           position: absolute;
@@ -359,6 +363,7 @@
           top: 208px;
         }
         &--8 {
+          transition-delay: 0.8s;
           width: 202px;
           height: 202px;
           position: absolute;
@@ -1538,15 +1543,14 @@
         color: #2d3192;
       }
       &__all-news {
-        transition: 0.4s;
-        border-radius: 12px;
-        border: 3px solid #dfe4eb;
         &__link {
           @include forSmall {
             padding: 0 70px 0 24px;
           }
+          border-radius: 12px;
+          border: 3px solid #dfe4eb;
           display: inline-block;
-          height: 53px;
+          height: px;
           padding: 0 100px 0 24px;
           font-weight: 600;
           font-size: 15px;
@@ -1698,11 +1702,13 @@
 }
 .seem {
   visibility: visible;
-  transition: 0.4s;
   opacity: 1;
   transform: translate(0, 0px) scale(1);
 }
 .show-team {
   opacity: 1;
   visibility: visible;
+}
+.delay-for-item {
+  transition-delay: 0;
 }

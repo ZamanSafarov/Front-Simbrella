@@ -69,7 +69,8 @@ body {
             color: #eee;
             text-decoration: none;
             transition: 0.15s linear;
-            padding: 8px 0px; }
+            padding: 8px 0px;
+            transition: 0.2s; }
           .header__container__nav__list__list-item__link:hover {
             color: #ff931e; }
         .header__container__nav__list__burger-menu {
@@ -179,6 +180,7 @@ body {
 .sticky {
   transition: 0.4s;
   background-color: white;
+  color: black;
   height: 80px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.21); }
 
@@ -551,31 +553,28 @@ body {
         .first-company__for-padding__text-container__paragraph__text {
           line-height: 1.7;
           font-size: 15px; }
-      .first-company__for-padding__text-container__link {
-        margin-top: 46%;
-        display: inline-block;
-        padding: 0 0 0 34px;
+  .first-company__mouse-container {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 4%; }
+    @media only screen and (max-width: 1023px) {
+      .first-company__mouse-container {
+        display: none; } }
+    .first-company__mouse-container__link {
+      text-decoration: none;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center; }
+      .first-company__mouse-container__link__img {
+        margin-bottom: 10px; }
+      .first-company__mouse-container__link__discover {
         font-size: 14px;
-        line-height: 1.71;
-        color: #fff;
+        padding-left: 10px;
         text-decoration: none;
-        position: absolute;
-        font-weight: 500; }
-        @media only screen and (max-width: 1023px) {
-          .first-company__for-padding__text-container__link {
-            display: none; } }
-        .first-company__for-padding__text-container__link__discover {
-          display: inline-block;
-          margin-bottom: 3px; }
-      .first-company__for-padding__text-container__link::before {
-        content: "";
-        display: block;
-        width: 22px;
-        height: 41px;
-        background: url(https://www.simbrella.com/site/templates/img/mouse_icon.svg) no-repeat 0 0;
-        position: absolute;
-        left: 0;
-        top: calc(50% - 26px); }
+        color: white; }
 
 .what_we_do-sec {
   padding: 35px 0 60px; }
@@ -767,7 +766,11 @@ body {
           width: 100%;
           height: auto; } }
       .products__wrapper__rounds__item {
-        transition: 0.3s; }
+        transition: 0.3s;
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0.9);
+        transition: 0.9s cubic-bezier(0.39, 0.575, 0.565, 1); }
         .products__wrapper__rounds__item--1 {
           width: 210px;
           height: 150px;
@@ -775,42 +778,49 @@ body {
           left: calc(50% - 105px);
           top: 0px; }
         .products__wrapper__rounds__item--2 {
+          transition-delay: 0.1s;
           width: 202px;
           height: 202px;
           position: absolute;
           left: 386px;
           top: 31px; }
         .products__wrapper__rounds__item--3 {
+          transition-delay: 0.2s;
           width: 150px;
           height: 210px;
           position: absolute;
           left: 468px;
           top: 208px; }
         .products__wrapper__rounds__item--4 {
+          transition-delay: 0.3s;
           width: 202px;
           height: 202px;
           position: absolute;
           left: 386px;
           top: 390px; }
         .products__wrapper__rounds__item--5 {
+          transition-delay: 0.5s;
           width: 210px;
           height: 150px;
           position: absolute;
           left: 204px;
           top: 474px; }
         .products__wrapper__rounds__item--6 {
+          transition-delay: 0.6s;
           width: 202px;
           height: 202px;
           position: absolute;
           left: 28px;
           top: 390px; }
         .products__wrapper__rounds__item--7 {
+          transition-delay: 0.7s;
           width: 150px;
           height: 210px;
           position: absolute;
           left: 0;
           top: 208px; }
         .products__wrapper__rounds__item--8 {
+          transition-delay: 0.8s;
           width: 202px;
           height: 202px;
           position: absolute;
@@ -1895,29 +1905,27 @@ body {
         @media only screen and (max-width: 479px) {
           .news__wrapper__up__text {
             font-size: 24px; } }
-      .news__wrapper__up__all-news {
-        transition: 0.4s;
+      .news__wrapper__up__all-news__link {
         border-radius: 12px;
-        border: 3px solid #dfe4eb; }
-        .news__wrapper__up__all-news__link {
-          display: inline-block;
-          height: 53px;
-          padding: 0 100px 0 24px;
-          font-weight: 600;
-          font-size: 15px;
-          line-height: 56px;
-          color: #222;
-          text-decoration: none;
-          background: url(https://www.simbrella.com/site/templates/img/link_orange_icon.svg) calc(100% - 24px) 50%;
-          background-repeat: no-repeat;
-          transition: 0.4s; }
-          @media only screen and (max-width: 479px) {
-            .news__wrapper__up__all-news__link {
-              padding: 0 70px 0 24px; } }
-        .news__wrapper__up__all-news__link:hover {
-          transition: 0.4s;
-          background: url(https://www.simbrella.com/site/templates/img/link_orange_icon.svg) calc(100% - 19px) 50%;
-          background-repeat: no-repeat; }
+        border: 3px solid #dfe4eb;
+        display: inline-block;
+        height: px;
+        padding: 0 100px 0 24px;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 56px;
+        color: #222;
+        text-decoration: none;
+        background: url(https://www.simbrella.com/site/templates/img/link_orange_icon.svg) calc(100% - 24px) 50%;
+        background-repeat: no-repeat;
+        transition: 0.4s; }
+        @media only screen and (max-width: 479px) {
+          .news__wrapper__up__all-news__link {
+            padding: 0 70px 0 24px; } }
+      .news__wrapper__up__all-news__link:hover {
+        transition: 0.4s;
+        background: url(https://www.simbrella.com/site/templates/img/link_orange_icon.svg) calc(100% - 19px) 50%;
+        background-repeat: no-repeat; }
       .news__wrapper__up__all-news:hover {
         transition: 0.4s;
         border-color: #ff931e; }
@@ -2034,13 +2042,15 @@ body {
 
 .seem {
   visibility: visible;
-  transition: 0.4s;
   opacity: 1;
   transform: translate(0, 0px) scale(1); }
 
 .show-team {
   opacity: 1;
   visibility: visible; }
+
+.delay-for-item {
+  transition-delay: 0; }
 
 .what-we-do {
   position: relative;

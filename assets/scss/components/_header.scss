@@ -44,6 +44,7 @@
             text-decoration: none;
             transition: 0.15s linear;
             padding: 8px 0px;
+            transition: 0.2s;
           }
           &__link:hover {
             color: #ff931e;
@@ -212,6 +213,7 @@
 .sticky {
   transition: 0.4s;
   background-color: white;
+  color: black;
   height: 80px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.21);
 }
