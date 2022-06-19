@@ -118,202 +118,488 @@
     }
   }
 }
-
 .apply {
+  padding: 120px 0;
+  background: #2d3192;
+
   @include forTablet {
     padding: 40px 0;
   }
-  padding: 120px 0;
-  background: #2d3192;
-  &__wrapper {
+
+  @include forPhone {
+    padding: 40px 0;
+  }
+
+  @include forSmall {
+    padding: 40px 0;
+  }
+
+  &__container {
     @include containerStyle();
-    &__text {
-      @include forTablet {
-        padding: 0 0 20px;
-        font-size: 27px;
-      }
-      @include forPhone {
-        font-size: 24px;
-      }
-      @include forSmall {
-        font-size: 21px;
-      }
-      font-weight: 500;
-      padding-bottom: 80px;
+
+    &__cap {
+      padding: 0 0 80px;
       font-size: 36px;
       line-height: 1.29;
-      letter-spacing: 0.01em;
       color: #fff;
-    }
-    &__form {
-      padding-bottom: 80px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-      @include flexbox(center, space-between);
-      @include forTablet {
-        display: block;
-        padding: 0 0 40px;
+
+      @include forPhone {
+        padding: 0 0 20px;
+        font-size: 24px;
       }
-      &__left {
-        width: calc(55% - 15px);
-        @include flexbox(flex-start, space-between);
-        @include forTablet {
-          width: 100%;
-          padding: 0 0 20px;
-        }
+
+      @include forSmall {
+        padding: 0 0 20px;
+        font-size: 21px;
+      }
+    }
+
+    &__success {
+      display: none;
+      max-width: 440px;
+      padding: 32px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 4px;
+
+      &__title {
+        padding: 80px 0 0;
+        font-size: 32px;
+        line-height: 1.5;
+        letter-spacing: 0.01em;
+        color: #fff;
+        background: url("/assets/icons/success_green_icon.svg") no-repeat 0 0;
+      }
+    }
+
+    &__form {
+      &__inp {
+        align-items: flex-start;
+        padding: 0 0 80px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        @include flexbox(flex-start,
+          space-between);
+        align-content: stretch;
+
         @include forPhone {
           display: block;
-          padding: 0;
+          padding: 0 0 40px;
         }
-        &__input-container {
-          width: calc(33.333% - 15px);
-          @include forTablet {
-            width: calc(33.333% - 10px);
-          }
-          @include forPhone {
-            width: 100%;
-            padding-bottom: 20px;
-          }
-          &__input {
-            display: block;
-            width: 100%;
-            height: 64px;
-            padding: 0 20px;
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            background: none;
-            font-size: 16px;
-            font-weight: 600;
-            font-family: inherit;
-            color: #fff;
-            border-radius: 12px;
-          }
-        }
-      }
-      &__right {
-        @include flexbox(flex-start, space-between);
+
         @include forTablet {
-          width: 100%;
+          display: block;
+          padding: 0 0 40px;
         }
+
         @include forSmall {
           display: block;
+          padding: 0 0 40px;
         }
-        width: calc(45% - 15px);
-        &__file-upload {
+
+        &__left {
+          width: calc(55% - 15px);
+          @include flexbox(flex-start,
+            space-between);
+          align-content: stretch;
+
           @include forTablet {
-            width: calc(50% - 10px);
-          }
-          @include forSmall {
             width: 100%;
-            margin-bottom: 20px;
+            padding: 0 0 20px;
           }
-          @include flexbox();
-          height: 64px;
-          text-align: center;
-          border: 1px dashed rgba(255, 255, 255, 0.5);
-          border-radius: 12px;
-          cursor: pointer;
-          width: 225px;
-          &__input {
-            display: none;
+
+          @include forPhone {
+            display: block;
+            width: 100%;
+            padding: 0 0 20px px;
           }
-          &__text {
-            display: inline-block;
-            padding: 0 10px 0 27px;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 2;
-            color: #fff;
-            white-space: nowrap;
-            max-width: 70%;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            background: url(https://www.simbrella.com/site/templates/img/file_white_icon.svg);
-            background-repeat: no-repeat;
-            background-position: 0 50%;
+
+          @include forSmall {
+            display: block;
+            width: 100%;
+            padding: 0 0 20px;
+          }
+
+          &__item {
+            width: calc(33.333% - 15px);
+
+            @include forPhone {
+              width: 100%;
+              padding: 0 0 20px;
+            }
+
+            @include forSmall {
+              width: 100%;
+              padding: 0 0 20px;
+
+              &:last-child {
+                padding: 0;
+              }
+            }
+
+            &__input {
+              width: 100%;
+              height: 64px;
+              padding: 0 20px;
+              border: 1px solid rgba(255, 255, 255, 0.5);
+              background: none;
+              font-size: 16px;
+              font-weight: 300;
+              color: rgb(255, 254, 254);
+              border-radius: 12px;
+
+              &::placeholder {
+                color: rgb(198, 198, 198);
+              }
+            }
           }
         }
-        &__submit {
+
+        &__right {
+          @include flexbox(flex-start,
+            space-between);
+          align-content: stretch;
+          width: calc(45% - 15px);
+
           @include forTablet {
-            width: calc(50% - 5px);
+            width: 100%;
           }
+
+          @include forPhone {
+            width: 100%;
+          }
+
           @include forSmall {
+            display: block;
             width: 100%;
           }
-          width: calc(50% - 15px);
-          &__link {
-            width: 100%;
-            @include flexbox();
-            text-align: left;
-            transition: 0.4s;
-            border-radius: 12px;
-            border: 3px solid white;
-            color: white;
-            display: inline-block;
-            height: 64px;
-            padding: 0 80px 0 24px;
-            font-weight: 600;
-            font-size: 15px;
-            line-height: 58px;
-            text-decoration: none;
-            background: url(https://www.simbrella.com/site/templates/img/link_orange_icon.svg)
-              calc(100% - 24px) 50%;
-            background-repeat: no-repeat;
-            transition: 0.4s;
+
+          &__file {
+            width: calc(50% - 15px);
+
+            @include forSmall {
+              width: 100%;
+              margin: 0 0 20px;
+            }
+
+            &__upload {
+              @include flexbox(center,
+                center);
+              align-content: stretch;
+              width: 100%;
+              height: 64px;
+              text-align: center;
+              border: 1px dashed rgba(255, 255, 255, 0.5);
+              border-radius: 12px;
+              cursor: pointer;
+
+              &__input {
+                display: none;
+              }
+
+              &__span {
+                display: inline-block;
+                padding: 0 10px 0 27px;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 1.5;
+                color: #fff;
+                white-space: nowrap;
+                max-width: 70%;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                background: url("https://www.simbrella.com/site/templates/img/file_white_icon.svg") no-repeat;
+              }
+            }
           }
-          &__link:hover {
+
+          &__button {
+            width: calc(50% - 15px);
+            @include forOverTablet{
+              width: calc(50% - 5px);
+            }
+            @include forSmall {
+              width: 100%
+            }
+
+            &__link {
+            width: 100%;
+              @include flexbox();
+              text-align: left;
+              transition: 0.4s;
+              border-radius: 12px;
+              border: 3px solid white;
+              color: white;
+              display: inline-block;
+              height: 64px;
+              padding: 0 80px 0 24px;
+              font-weight: 600;
+              font-size: 15px;
+              line-height: 58px;
+              text-decoration: none;
+              background: url(https://www.simbrella.com/site/templates/img/link_orange_icon.svg)
+                calc(100% - 24px) 50%;
+              background-repeat: no-repeat;
+              transition: 0.4s;
+            }
+
+            &__link:hover {
             transition: 0.4s;
-            background: url(https://www.simbrella.com/site/templates/img/link_orange_icon.svg)
-              calc(100% - 19px) 50%;
-            background-repeat: no-repeat;
-            border-color: #ff931e;
+              background: url(https://www.simbrella.com/site/templates/img/link_orange_icon.svg)
+                calc(100% - 19px) 50%;
+              background-repeat: no-repeat;
+              border-color: #ff931e;
+            }
           }
         }
       }
     }
+
     &__advantages {
-      @include forTablet {
-        padding-top: 60px;
-      }
-      @include forPhone {
-        padding-top: 40px;
-      }
-      padding-top: 85px;
-      @include flexbox(center, space-between);
+      padding: 85px 0 0;
+      @include flexbox(flex-start,
+        space-between);
       align-content: stretch;
-      &__card {
+
+      @include forPhone {
+        padding: 40px 0 0;
+      }
+
+      @include forSmall {
+        padding: 40px 0 0;
+      }
+
+      &__item {
         width: calc(33.333% - 30px);
+
         @include forPhone {
           width: calc(33.333% - 15px);
-          padding-bottom: 20px;
+          padding: 0 0 20px;
           text-align: center;
         }
-        &__image-container {
-          height: 96px;
-          @include forPhone {
-            @include flexbox();
-          }
-          &__image {
-            width: 48px;
-          }
+
+        @include forSmall {
+          width: calc(33.333% - 15px);
+          padding: 0 0 20px;
+          text-align: center;
         }
-        &__text {
-          @include forTablet {
-            font-size: 18px;
-          }
-          @include forPhone {
-            padding-bottom: 8px;
-            font-size: 16px;
-          }
-          @include forSmall {
-            font-size: 14px;
-          }
+
+        &__img {
+          height: 96px;
+        }
+
+        &__cap {
           padding: 0 0 16px;
           font-weight: bold;
           font-size: 25px;
           line-height: 1.6;
-          letter-spacing: 0.01em;
           color: #fff;
+
+          @include forPhone {
+            padding: 0 0 8px;
+            font-size: 16px;
+          }
+
+          @include forSmall {
+            padding: 0 0 8px;
+            font-size: 14px;
+          }
         }
       }
     }
   }
 }
+
+// .apply {
+//   @include forTablet {
+//     padding: 40px 0;
+//   }
+//   padding: 120px 0;
+//   background: #2d3192;
+//   &__wrapper {
+//     @include containerStyle();
+//     &__text {
+//       @include forTablet {
+//         padding: 0 0 20px;
+//         font-size: 27px;
+//       }
+//       @include forPhone {
+//         font-size: 24px;
+//       }
+//       @include forSmall {
+//         font-size: 21px;
+//       }
+//       font-weight: 500;
+//       padding-bottom: 80px;
+//       font-size: 36px;
+//       line-height: 1.29;
+//       letter-spacing: 0.01em;
+//       color: #fff;
+//     }
+//     &__form {
+//       padding-bottom: 80px;
+//       border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+//       @include flexbox(center, space-between);
+//       @include forTablet {
+//         display: block;
+//         padding: 0 0 40px;
+//       }
+//       &__left {
+//         width: calc(55% - 15px);
+//         @include flexbox(flex-start, space-between);
+//         @include forTablet {
+//           width: 100%;
+//           padding: 0 0 20px;
+//         }
+//         @include forPhone {
+//           display: block;
+//           padding: 0;
+//         }
+//         &__input-container {
+//           width: calc(33.333% - 15px);
+//           @include forTablet {
+//             width: calc(33.333% - 10px);
+//           }
+//           @include forPhone {
+//             width: 100%;
+//             padding-bottom: 20px;
+//           }
+//           &__input {
+//             display: block;
+//             width: 100%;
+//             height: 64px;
+//             padding: 0 20px;
+//             border: 1px solid rgba(255, 255, 255, 0.5);
+//             background: none;
+//             font-size: 16px;
+//             font-weight: 600;
+//             font-family: inherit;
+//             color: #fff;
+//             border-radius: 12px;
+//           }
+//         }
+//       }
+//       &__right {
+//         @include flexbox(flex-start, space-between);
+//         @include forTablet {
+//           width: 100%;
+//         }
+//         @include forSmall {
+//           display: block;
+//         }
+//         width: calc(45% - 15px);
+//         &__file-upload {
+//           @include forTablet {
+//             width: calc(50% - 10px);
+//           }
+//           @include forSmall {
+//             width: 100%;
+//             margin-bottom: 20px;
+//           }
+//           @include flexbox();
+//           height: 64px;
+//           text-align: center;
+//           border: 1px dashed rgba(255, 255, 255, 0.5);
+//           border-radius: 12px;
+//           cursor: pointer;
+//           width: 225px;
+//           &__input {
+//             display: none;
+//           }
+//           &__text {
+//             display: inline-block;
+//             padding: 0 10px 0 27px;
+//             font-weight: 500;
+//             font-size: 16px;
+//             line-height: 2;
+//             color: #fff;
+//             white-space: nowrap;
+//             max-width: 70%;
+//             text-overflow: ellipsis;
+//             overflow: hidden;
+//             background: url(https://www.simbrella.com/site/templates/img/file_white_icon.svg);
+//             background-repeat: no-repeat;
+//             background-position: 0 50%;
+//           }
+//         }
+//         &__submit {
+//           @include forTablet {
+//             width: calc(50% - 5px);
+//           }
+//           @include forSmall {
+//             width: 100%;
+//           }
+//           width: calc(50% - 15px);
+//           &__link {
+//             width: 100%;
+//             @include flexbox();
+//             text-align: left;
+//             transition: 0.4s;
+//             border-radius: 12px;
+//             border: 3px solid white;
+//             color: white;
+//             display: inline-block;
+//             height: 64px;
+//             padding: 0 80px 0 24px;
+//             font-weight: 600;
+//             font-size: 15px;
+//             line-height: 58px;
+//             text-decoration: none;
+//             background: url(https://www.simbrella.com/site/templates/img/link_orange_icon.svg)
+//               calc(100% - 24px) 50%;
+//             background-repeat: no-repeat;
+//             transition: 0.4s;
+//           }
+//           &__link:hover {
+
+//           }
+//         }
+//       }
+//     }
+//     &__advantages {
+//       @include forTablet {
+//         padding-top: 60px;
+//       }
+//       @include forPhone {
+//         padding-top: 40px;
+//       }
+//       padding-top: 85px;
+//       @include flexbox(center, space-between);
+//       align-content: stretch;
+//       &__card {
+//         width: calc(33.333% - 30px);
+//         @include forPhone {
+//           width: calc(33.333% - 15px);
+//           padding-bottom: 20px;
+//           text-align: center;
+//         }
+//         &__image-container {
+//           height: 96px;
+//           @include forPhone {
+//             @include flexbox();
+//           }
+//           &__image {
+//             width: 48px;
+//           }
+//         }
+//         &__text {
+//           @include forTablet {
+//             font-size: 18px;
+//           }
+//           @include forPhone {
+//             padding-bottom: 8px;
+//             font-size: 16px;
+//           }
+//           @include forSmall {
+//             font-size: 14px;
+//           }
+//           padding: 0 0 16px;
+//           font-weight: bold;
+//           font-size: 25px;
+//           line-height: 1.6;
+//           letter-spacing: 0.01em;
+//           color: #fff;
+//         }
+//       }
+//     }
+//   }
+// }

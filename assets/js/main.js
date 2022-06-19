@@ -1494,8 +1494,8 @@ if (Madagascar) {
   });
 }
 
-//for-header-link-color(When Scroll)
-if (navs) {
+// for-header-link-color(When Scroll)
+if (Madagascar) {
   window.addEventListener("scroll", () => {
   if (window.pageYOffset >= 850 && window.pageYOffset < 3260) {
     navs[0].style.color = "#FF931e";
