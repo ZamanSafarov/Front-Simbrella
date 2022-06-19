@@ -258,8 +258,9 @@ const inputTrue = Array.from(document.querySelectorAll(".input_true"));
 const succesContainer = document.querySelector(".conformity__wrapper__r__padding__succes")
 const formContainer = document.querySelector(".conformity__wrapper__r__padding__form")
 //form inputs
-if (inputTrue) {
-    applyButton.addEventListener("click", () => {
+if (inputTrue && applyButton) {
+    applyButton.addEventListener("click", (e) => {
+      e.preventDefault()
       inputTrue.forEach((inp)=>{
         if (inp.value === "") {
           inp.style.borderColor = "red";
