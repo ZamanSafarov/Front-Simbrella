@@ -1550,7 +1550,7 @@
           border-radius: 12px;
           border: 3px solid #dfe4eb;
           display: inline-block;
-          height: px;
+          height: 56px;
           padding: 0 100px 0 24px;
           font-weight: 600;
           font-size: 15px;
@@ -1567,6 +1567,7 @@
           background: url(https://www.simbrella.com/site/templates/img/link_orange_icon.svg)
             calc(100% - 19px) 50%;
           background-repeat: no-repeat;
+          border-color: #ff931e;
         }
       }
       &__all-news:hover {
