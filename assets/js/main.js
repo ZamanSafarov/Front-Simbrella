@@ -255,6 +255,8 @@ btn.on("click", function () {
 
 const applyButton = Array.from(document.querySelectorAll(".apply-true"));
 const inputTrue = Array.from(document.querySelectorAll(".input_true"));
+const succesContainer = document.querySelector(".conformity__wrapper__r__padding__succes")
+const formContainer = document.querySelector(".conformity__wrapper__r__padding__form")
 //form inputs
 if (inputTrue) {
   applyButton.forEach((item) => {
@@ -262,8 +264,15 @@ if (inputTrue) {
       inputTrue.forEach((inp) => {
         if (inp.value.trim() === "") {
           inp.style.borderColor = "red";
+          succesContainer.style.display = "none"
+          formContainer.style.display = "block"
         } else {
           inp.style.borderColor = "#dddee1";
+          setTimeout(()=>{
+            succesContainer.style.display = "block"
+            formContainer.style.display = "none"
+          },1000)
+
         }
       });
     });
